@@ -1,0 +1,5 @@
+SELECT FECHA_CREACION = format(o.create_dt_tm,"DD/MM/YYYY HH:MM"), HL7 = o.msg_text
+FROM oen_txlog o
+WHERE o.create_dt_tm between cnvtdatetime("DD-MON-YYYY HH:MM") 
+AND cnvtdatetime("DD-MON-YYYY HH:MM") 
+and o.interfaceid like '*XXXX*'
